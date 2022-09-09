@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>People Counter App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        .home
+        {
+            width: 150px;
+            height: 150px;
+        }
+        .guest
+        {
+            width: 150px;
+            height: 150px;
+        }
+        .main
+        {
+            width: 400px;
+            height: 200px;
+            background-color: #292c6e;
+        }
+        .display
+        {
+            height: 70px;
+        }
+        .bt
+        {
+            background-color: #292c6e; 
+            border: 1px solid white;
+        }
+    </style>
+  </head>
+    <body>
+        <div class="main text-center container d-flex justify-content-center mt-4">
+            
+            <div class="container home col-4">
+                <div class="row">
+                    <h2 class="text-light">Home</h2>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div id="homeHolder" class="text-danger bg-dark display w-50 d-flex justify-content-center align-items-center">
+                        <h1 id="homeScore">0</h1>
+                    </div>
+                </div>
+                <div class="row buttons d-flex justify-content-around mt-3">
+                    <button class="bt btn btn1 text-light col-3"onclick="add1(),checkScore()">+1</button>
+                    <button class="bt btn btn2 text-light col-3"onclick="add2(),checkScore()">+2</button>
+                    <button class="bt btn btn3 text-light col-3"onclick="add3(),checkScore()">+3</button>
+                </div>
+            </div>
+
+            <div class="container guest">
+                <div class="row">
+                    <h2  class="text-light">Guest</h2>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div id="guestHolder" class="text-danger display bg-dark w-50 d-flex justify-content-center align-items-center">
+                        <h1 id="guestScore">0</h1>
+                    </div>
+                </div>
+                <div class="row buttons d-flex justify-content-around mt-3">
+                    <button class="bt btn text-light btn1G col-3"onclick="add1G(),checkScore()">+1</button>
+                    <button class="bt btn text-light btn2G col-3"onclick="add2G(),checkScore()">+2</button>
+                    <button class="bt btn text-light btn3G col-3"onclick="add3G(),checkScore()">+3</button>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="text-center mt-3">
+            <button class="btn btn-danger"onclick="reset()">Reset</button>
+        </div>
+
+
+      <script src="basketBallApp.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </body>
+</html>
